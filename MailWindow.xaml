@@ -1,0 +1,23 @@
+﻿<Window x:Class="Nine_prac_C_sharp.MailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nine_prac_C_sharp"
+        mc:Ignorable="d"
+        Title="MailWindow" Height="450" Width="800" Background="Gray">
+    <Grid Background="#6D3F5B" Margin="20">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions >
+        <StackPanel>
+            <ListBox x:Name="choosingList"  Height="361" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged"/>
+
+        </StackPanel>
+            <Button Content="ОТПРАВИТЬ"  HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="inbox_list" Grid.Column="1" Background="MediumPurple" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+
+    </Grid>
+    
+</Window>
